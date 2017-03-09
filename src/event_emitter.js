@@ -36,8 +36,10 @@ Or EventEmitterModule can be injected dynamically into an object
 */
 
 class EventEmitterModule {
+  /*
   // Apply EventEmitterModule to the class
   static mixin(cls) {
+    console.log(EventEmitterModule.prototype);
     for (let name of Object.keys(EventEmitterModule.prototype || {})) {
       let value = EventEmitterModule.prototype[name];
       try {
@@ -57,7 +59,8 @@ class EventEmitterModule {
     obj.eventListeners = {};
     obj.catchAllEventListeners = [];
   }
-
+  */
+  
   emit(name, ...data) {
     let listener;
     if ((this.eventListeners != null ? this.eventListeners[name] : undefined) != null) {

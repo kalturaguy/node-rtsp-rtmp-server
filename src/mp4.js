@@ -25,8 +25,9 @@ let getCurrentTime = function() {
   return time[0] + (time[1] / 1e9);
 };
 
-class MP4File {
+class MP4File extends EventEmitterModule {
   constructor(filename) {
+    super();
     if (filename != null) {
       this.open(filename);
     }
@@ -793,7 +794,7 @@ class MP4File {
   }
 }
 
-EventEmitterModule.mixin(MP4File);
+//EventEmitterModule.mixin(MP4File);
 
 class Box {
   // time: seconds since midnight, Jan. 1, 1904 UTC

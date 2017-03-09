@@ -59,8 +59,9 @@ class AVStreamGenerator {
   teardown() {}
 }
 
-class AVStream {
+class AVStream extends EventEmitterModule {
   constructor(id) {
+    super();
     this.id = id;  // string
     this.initAVParams();
   }
@@ -248,7 +249,7 @@ class AVStream {
   }
 }
 
-EventEmitterModule.mixin(AVStream);
+//EventEmitterModule.mixin(AVStream);
 
 class MP4Stream extends AVStream {
   static create(filename) {
