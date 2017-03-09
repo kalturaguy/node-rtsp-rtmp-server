@@ -4,15 +4,19 @@
   "description": "RTSP/RTMP/HTTP hybrid server",
   "author": "Nao Iizuka <iizuka@kyu-mu.net>",
   "license": "MIT",
-  "main": "stream_server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "babel-node --inspect dist/server.js"
   },
   "dependencies": {
-    "ejs"    : "0.8.x",
+    "ejs": "0.8.x",
     "sequent": ">= 0.1.2"
   },
   "engines": {
-    "node": ">= 0.12.0"
+    "node": ">= 7.7.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
+    "babel-register": "^6.23.0"
   }
 }
