@@ -6,7 +6,7 @@ import aac from '../aac';
 import mpegts from '../mpegts';
 
 // -- Modify from here
-let INPUT_FILE = "test.ts";  // MPEG-TS file up to 1GB
+let INPUT_FILE = "../file/test.ts";  // MPEG-TS file up to 1GB
 // To convert from MP4 with H.264 video and AAC audio to MPEG-TS, run:
 // $ ffmpeg -i input.mp4 -c:v copy -c:a copy -bsf h264_mp4toannexb output.ts
 

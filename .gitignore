@@ -1,4 +1,3 @@
-.vscode
 .DS_Store
 *~
 *.sw[po]
@@ -10,7 +9,6 @@ lib-cov
 *.out
 *.pid
 *.gz
-*.js
 
 pids
 logs
